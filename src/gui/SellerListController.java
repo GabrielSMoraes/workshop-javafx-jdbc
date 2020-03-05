@@ -25,10 +25,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.entities.Seller;
-import model.services.DeparmentService;
+import model.services.SellerService;
 
 public class SellerListController implements Initializable, DataChangeListener {
-	private DeparmentService service;
+	private SellerService service;
 
 	@FXML
 	private TableView<Seller> tableViewSeller;
@@ -53,7 +53,7 @@ public class SellerListController implements Initializable, DataChangeListener {
 		createDialogForm(obj, "/gui/SellerForm.fxml", parentStage);
 	}
 
-	public void setSellerService(DeparmentService service) {
+	public void setSellerService(SellerService service) {
 		this.service = service;
 	}
 
